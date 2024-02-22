@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "oqni5XLcl3smtYflJP0ll3C+0cpXqHmzacb7K4JhWjjQiyH3VKQZhuo9EzT+Lag8TH8DQk61IQiLTQOjmwMIFA==",
+  "success": true,
+  "projectFilePath": "E:\\Godot Projects\\Better Together\\Better Together.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\riley\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\riley\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\riley\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

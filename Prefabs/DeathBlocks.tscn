@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxunl21uonalt"]
+
+[ext_resource type="PackedScene" uid="uid://bf88hy4af2pld" path="res://Prefabs/crumble_blocks.tscn" id="1_3ocyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_no3pp"]
+
+[node name="DeathBlocks" type="Node2D"]
+position = Vector2(958, 537)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(30, 393)
+scale = Vector2(-88.8147, 2.36317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_no3pp")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="CrumbleBlocks" parent="." instance=ExtResource("1_3ocyc")]
+position = Vector2(26, -2)

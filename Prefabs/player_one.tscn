@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsk83qh6g0gp4"]
+
+[ext_resource type="Script" path="res://_Scripts/PlayerMovement.cs" id="1_sg6lb"]
+[ext_resource type="PackedScene" uid="uid://bf88hy4af2pld" path="res://Prefabs/crumble_blocks.tscn" id="2_b0cd4"]
+[ext_resource type="Texture2D" uid="uid://chlc6loy77u8d" path="res://Sprites/Square.png" id="3_3sl3j"]
+[ext_resource type="Texture2D" uid="uid://no7ji05wbhei" path="res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp" id="4_p1jot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08w57"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kls2e"]
+
+[node name="PlayerOne" type="CharacterBody2D" groups=["player"]]
+modulate = Color(0.25, 0.5, 2, 1)
+light_mask = 0
+z_index = 1
+position = Vector2(412, 953)
+scale = Vector2(0.75, 0.75)
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("1_sg6lb")
+deathBlock = ExtResource("2_b0cd4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_08w57")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("3_3sl3j")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2.25, 2.25)
+shape = SubResource("RectangleShape2D_kls2e")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+light_mask = 0
+color = Color(0, 0, 1, 1)
+shadow_enabled = true
+texture = ExtResource("4_p1jot")
+texture_scale = 5.0
+
+[connection signal="body_entered" from="Area2D" to="." method="KillPlayer"]

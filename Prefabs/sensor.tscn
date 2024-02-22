@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs76h2bp561cy"]
+
+[ext_resource type="Script" path="res://_Scripts/Sensor.cs" id="1_7of5h"]
+[ext_resource type="Texture2D" uid="uid://chlc6loy77u8d" path="res://Sprites/Square.png" id="2_vosl7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5p6u"]
+
+[node name="Sensor" type="Area2D"]
+modulate = Color(0.5, 1.5, 0.5, 0.25)
+position = Vector2(1603, 969)
+collision_mask = 8
+script = ExtResource("1_7of5h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_a5p6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.05176e-05, -5.72205e-06)
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("2_vosl7")
+
+[connection signal="body_entered" from="." to="." method="Activate"]
+[connection signal="body_exited" from="." to="." method="Deactivate"]
