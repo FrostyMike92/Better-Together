@@ -1,32 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708561975
-icon.svg::CompressedTexture2D::9102203499329875440::1708126356::1708126363::1::::<><>::
-::res://Levels/::1708561902
-Level_1.tscn::PackedScene::95921365167313910::1708561877::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
-Level_2.tscn::PackedScene::5991786640242600183::1708561877::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
-Level_3.tscn::PackedScene::6373897126188700006::1708561877::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
-Level_4.tscn::PackedScene::2175818273816135215::1708561902::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn<>uid://d2xf7x3ao606w::::res://icon.svg<>uid://csgv4gj55d7kx::::res://Prefabs/lighting_setup.tscn
-Level_5.tscn::PackedScene::3382153651290012036::1708561878::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
-Level_6.tscn::PackedScene::7566379068179077541::1708561878::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn<>uid://csgv4gj55d7kx::::res://Prefabs/lighting_setup.tscn
-testing_scene.tscn::PackedScene::1528930342754330399::1708561877::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://d2xf7x3ao606w::::res://icon.svg<>res://_Scripts/PlayerMovement.cs<>res://_Scripts/Door.cs
-::res://Prefabs/::1708561975
-crumble_blocks.tscn::PackedScene::2807506834453355293::1708561877::0::1::::<><>::uid://chlc6loy77u8d::::res://Sprites/Square.png<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn
-DeathBlocks.tscn::PackedScene::6429282750004357585::1708561877::0::1::::<><>::uid://bf88hy4af2pld::::res://Prefabs/crumble_blocks.tscn
-lighting_setup.tscn::PackedScene::6049953994713130083::1708561761::0::1::::<><>::
-player_one.tscn::PackedScene::3672518162313651579::1708561877::0::1::::<><>::res://_Scripts/PlayerMovement.cs<>uid://bf88hy4af2pld::::res://Prefabs/crumble_blocks.tscn<>uid://chlc6loy77u8d::::res://Sprites/Square.png<>uid://no7ji05wbhei::::res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp
-player_two.tscn::PackedScene::1901617721940076898::1708561877::0::1::::<><>::res://_Scripts/PlayerMovement.cs<>uid://bf88hy4af2pld::::res://Prefabs/crumble_blocks.tscn<>uid://chlc6loy77u8d::::res://Sprites/Square.png<>uid://no7ji05wbhei::::res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp
-sensor.tscn::PackedScene::6104196788731920828::1708561877::0::1::::<><>::res://_Scripts/Sensor.cs<>uid://chlc6loy77u8d::::res://Sprites/Square.png
-::res://Scenes/::1708127684
-::res://Sprites/::1708561975
-2d_lights_and_shadows_neutral_point_light (1).webp::CompressedTexture2D::943315731964349972::1708560828::1708560828::1::::<><>::
-360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg::CompressedTexture2D::707568251397479084::1708561971::1708561975::1::::<><>::
-Square.png::CompressedTexture2D::5287048822262279349::1708494096::1708494107::1::::<><>::
-Untitled_Artwork-1.png::CompressedTexture2D::2159928325330740026::1708472189::1708472189::1::::<><>::
-::res://Tilesets/::1708561854
-testingtileset.tres::TileSet::1902605053679228044::1708561854::0::1::::<><>::uid://d2xf7x3ao606w::::res://icon.svg<>uid://51jx61aasxgc::::res://Sprites/Untitled_Artwork-1.png
-::res://_Scripts/::1708495884
-Door.cs::CSharpScript::-1::1708298173::0::1::::<><>::
-DoorSensor.cs::CSharpScript::-1::1708410001::0::1::::<><>::
-LevelManager.cs::CSharpScript::-1::1708468234::0::1::::<><>::
-PlayerMovement.cs::CSharpScript::-1::1708495884::0::1::::<><>::
-Sensor.cs::CSharpScript::-1::1708495409::0::1::::<><>::
+::res://::1708641167
+icon.svg::CompressedTexture2D::9102203499329875440::1708640419::1708640419::1::::<><>::
+README.md::TextFile::-1::1708640419::0::1::::<><>::
+::res://Levels/::1708640419
+Level_1.tscn::PackedScene::95921365167313910::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
+Level_2.tscn::PackedScene::5991786640242600183::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
+Level_3.tscn::PackedScene::6373897126188700006::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
+Level_4.tscn::PackedScene::2175818273816135215::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn<>uid://kc0ss4d7wsxg::::res://Sprites/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg
+Level_5.tscn::PackedScene::3382153651290012036::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn<>uid://kc0ss4d7wsxg::::res://Sprites/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg<>uid://no7ji05wbhei::::res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp
+Level_6.tscn::PackedScene::7566379068179077541::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn<>uid://2dfmpfiq5md3::::res://Prefabs/player_two.tscn<>uid://cs76h2bp561cy::::res://Prefabs/sensor.tscn
+testing_scene.tscn::PackedScene::1528930342754330399::1708640419::0::1::::<><>::uid://2dvvld3e7n37::::res://Tilesets/testingtileset.tres<>uid://d2xf7x3ao606w::::res://icon.svg<>res://_Scripts/PlayerMovement.cs<>res://_Scripts/Door.cs
+::res://Prefabs/::1708640419
+crumble_blocks.tscn::PackedScene::2807506834453355293::1708640419::0::1::::<><>::uid://chlc6loy77u8d::::res://Sprites/Square.png<>uid://bsk83qh6g0gp4::::res://Prefabs/player_one.tscn
+DeathBlocks.tscn::PackedScene::6429282750004357585::1708640419::0::1::::<><>::uid://bf88hy4af2pld::::res://Prefabs/crumble_blocks.tscn
+player_one.tscn::PackedScene::3672518162313651579::1708640419::0::1::::<><>::res://_Scripts/PlayerMovement.cs<>uid://bf88hy4af2pld::::res://Prefabs/crumble_blocks.tscn<>uid://chlc6loy77u8d::::res://Sprites/Square.png<>uid://no7ji05wbhei::::res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp
+player_two.tscn::PackedScene::1901617721940076898::1708640419::0::1::::<><>::res://_Scripts/PlayerMovement.cs<>uid://bf88hy4af2pld::::res://Prefabs/crumble_blocks.tscn<>uid://chlc6loy77u8d::::res://Sprites/Square.png<>uid://no7ji05wbhei::::res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp
+sensor.tscn::PackedScene::6104196788731920828::1708640419::0::1::::<><>::res://_Scripts/Sensor.cs<>uid://chlc6loy77u8d::::res://Sprites/Square.png
+::res://Sprites/::1708640419
+2d_lights_and_shadows_neutral_point_light (1).webp::CompressedTexture2D::943315731964349972::1708640419::1708640419::1::::<><>::
+360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg::CompressedTexture2D::707568251397479084::1708640419::1708640419::1::::<><>::
+Square.png::CompressedTexture2D::5287048822262279349::1708640419::1708640419::1::::<><>::
+Untitled_Artwork-1.png::CompressedTexture2D::2159928325330740026::1708640419::1708640419::1::::<><>::
+::res://Tilesets/::1708640419
+testingtileset.tres::TileSet::1902605053679228044::1708640419::0::1::::<><>::uid://d2xf7x3ao606w::::res://icon.svg<>uid://51jx61aasxgc::::res://Sprites/Untitled_Artwork-1.png
+::res://_Scripts/::1708640419
+Door.cs::CSharpScript::-1::1708640419::0::1::::<>StaticBody2D<>::
+DoorSensor.cs::CSharpScript::-1::1708640419::0::1::::<>Area2D<>::
+LevelManager.cs::CSharpScript::-1::1708640419::0::1::::<>Node<>::
+PlayerMovement.cs::CSharpScript::-1::1708640419::0::1::::<>CharacterBody2D<>::
+Sensor.cs::CSharpScript::-1::1708640419::0::1::::<>Area2D<>::
