@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf88hy4af2pld"]
+[gd_scene load_steps=3 format=3 uid="uid://bf88hy4af2pld"]
 
 [ext_resource type="Texture2D" uid="uid://chlc6loy77u8d" path="res://Sprites/Square.png" id="1_1aksh"]
-[ext_resource type="PackedScene" uid="uid://bsk83qh6g0gp4" path="res://Prefabs/player_one.tscn" id="2_hbp3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vf6o3"]
 
@@ -131,6 +130,3 @@ shape = SubResource("RectangleShape2D_vf6o3")
 position = Vector2(1.78814e-07, -1.72853e-06)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_1aksh")
-
-[node name="PlayerOne" parent="." instance=ExtResource("2_hbp3o")]
-position = Vector2(34, 0)
