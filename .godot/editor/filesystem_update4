@@ -1,7 +1,8 @@
-res://Prefabs/crumble_blocks.tscn
-res://Tilesets/testingtileset.tres
-res://Prefabs/player_two.tscn
 res://Levels/testing_scene.tscn
+res://Tilesets/testingtileset.tres
 res://Prefabs/sensor.tscn
 res://Levels/Level_1.tscn
+res://Prefabs/crumble_blocks.tscn
 res://Prefabs/player_one.tscn
+res://Prefabs/player_two.tscn
+res://Levels/Level_5.tscn
