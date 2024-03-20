@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfdb13swqcxve"]
+
+[ext_resource type="Script" path="res://Levels/DisappearingPlatform.cs" id="1_grgo8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5xf5"]
+size = Vector2(144, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcix5"]
+size = Vector2(144, 48)
+
+[sub_resource type="Animation" id="Animation_dnorq"]
+resource_name = "restore"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m7p3q"]
+resource_name = "trigger"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7, 1, 1.2, 1.4, 1.5, 1.6, 1.7, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.705882), Color(1, 1, 1, 1), Color(1, 1, 1, 0.705882), Color(1, 1, 1, 1), Color(1, 1, 1, 0.705882), Color(1, 1, 1, 1), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.862745), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_heewr"]
+_data = {
+"restore": SubResource("Animation_dnorq"),
+"trigger": SubResource("Animation_m7p3q")
+}
+
+[node name="Disappearing Platform" type="StaticBody2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+position = Vector2(504, 888)
+collision_mask = 9
+script = ExtResource("1_grgo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k5xf5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -72.0
+offset_top = -24.0
+offset_right = 72.0
+offset_bottom = 24.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -5)
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xcix5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_heewr")
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="PlayerEntered"]

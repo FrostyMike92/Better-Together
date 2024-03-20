@@ -33,3 +33,20 @@ E:/Godot Projects/Better Together/.godot/mono/temp/obj/Debug/ref/Better Together
 /Users/riley/Documents/GitHub/Better-Together/.godot/mono/temp/obj/Debug/Better Together.pdb
 /Users/riley/Documents/GitHub/Better-Together/.godot/mono/temp/obj/Debug/Better Together.genruntimeconfig.cache
 /Users/riley/Documents/GitHub/Better-Together/.godot/mono/temp/obj/Debug/ref/Better Together.dll
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.csproj.AssemblyReference.cache
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.GeneratedMSBuildEditorConfig.editorconfig
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.AssemblyInfoInputs.cache
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.AssemblyInfo.cs
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.csproj.CoreCompileInputs.cache
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.dll
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\refint\Better Together.dll
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.pdb
+E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\Better Together.deps.json
+E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\Better Together.runtimeconfig.json
+E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\Better Together.dll
+E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\Better Together.pdb
+E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.csproj.CopyComplete
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.genruntimeconfig.cache
+E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\ref\Better Together.dll

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c31nka3q7di4b"]
+
+[ext_resource type="Script" path="res://Levels/InvisPlatform.cs" id="1_se20x"]
+[ext_resource type="AudioStream" uid="uid://bnftsxjwqjlmk" path="res://Sounds/pop.wav" id="2_4ma5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a17ex"]
+size = Vector2(48, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l83gk"]
+size = Vector2(48, 24)
+
+[node name="InvisPlatform" type="Node2D"]
+script = ExtResource("1_se20x")
+triggerSound = ExtResource("2_4ma5p")
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(648, 592)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_a17ex")
+
+[node name="Platform" type="ColorRect" parent="Platform"]
+offset_left = -24.0
+offset_top = -12.0
+offset_right = 24.0
+offset_bottom = 12.0
+color = Color(0, 0, 0, 1)
+
+[node name="DetectionArea" type="Area2D" parent="."]
+position = Vector2(648, 1000)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_l83gk")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="TriggerPlatform"]

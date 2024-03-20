@@ -1,0 +1,143 @@
+[gd_scene load_steps=10 format=3 uid="uid://b355bowu847pr"]
+
+[ext_resource type="TileSet" uid="uid://2dvvld3e7n37" path="res://Tilesets/testingtileset.tres" id="1_nkknd"]
+[ext_resource type="PackedScene" uid="uid://bsk83qh6g0gp4" path="res://Prefabs/player_one.tscn" id="2_v34o2"]
+[ext_resource type="PackedScene" uid="uid://2dfmpfiq5md3" path="res://Prefabs/player_two.tscn" id="3_lgjra"]
+[ext_resource type="PackedScene" uid="uid://cs76h2bp561cy" path="res://Prefabs/sensor.tscn" id="4_jlj7v"]
+[ext_resource type="Texture2D" uid="uid://kc0ss4d7wsxg" path="res://Sprites/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg" id="5_m3dkp"]
+[ext_resource type="PackedScene" uid="uid://bschtaebxmge5" path="res://Scenes/LaserRed.tscn" id="6_j33vq"]
+[ext_resource type="PackedScene" uid="uid://c31nka3q7di4b" path="res://Prefabs/invis_platform.tscn" id="6_nwp36"]
+[ext_resource type="PackedScene" uid="uid://b0hio2d20bgs8" path="res://Levels/PauseScreen.tscn" id="8_04w3y"]
+
+[sub_resource type="Environment" id="Environment_vcdru"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 6.0
+glow_bloom = 1.0
+fog_light_color = Color(0.670588, 0.533333, 0.0745098, 1)
+fog_light_energy = 4.37
+fog_sun_scatter = 1.0
+fog_density = 1.0
+fog_height = -1024.0
+fog_height_density = 0.055
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = ExtResource("1_nkknd")
+format = 2
+layer_0/name = "Build"
+layer_0/modulate = Color(0, 0, 0, 1)
+layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, 4, 65536, 1, 5, 65536, 1, 6, 65536, 1, 7, 65536, 1, 8, 65536, 1, 9, 65536, 1, 10, 65536, 1, 11, 65536, 1, 12, 65536, 1, 13, 65536, 1, 14, 65536, 1, 15, 65536, 1, 16, 65536, 1, 17, 65536, 1, 18, 65536, 1, 19, 65536, 1, 20, 65536, 1, 21, 65536, 1, 22, 65536, 1, 23, 65536, 1, 24, 65536, 1, 25, 65536, 1, 26, 65536, 1, 27, 65536, 1, 28, 65536, 1, 29, 65536, 1, 30, 65536, 1, 31, 65536, 1, 32, 65536, 1, 33, 65536, 1, 34, 65536, 1, 35, 65536, 1, 36, 65536, 1, 37, 65536, 1, 38, 65536, 1, 39, 65536, 1, 65575, 65536, 1, 131111, 65536, 1, 196647, 65536, 1, 262183, 65536, 1, 327719, 65536, 1, 393255, 65536, 1, 458791, 65536, 1, 524327, 65536, 1, 589863, 65536, 1, 655399, 65536, 1, 720935, 65536, 1, 786471, 65536, 1, 852007, 65536, 1, 917543, 65536, 1, 983079, 65536, 1, 1048615, 65536, 1, 1114151, 65536, 1, 1179687, 65536, 1, 1245223, 65536, 1, 1376256, 65536, 1, 1441792, 65536, 1, 1376257, 65536, 1, 1441793, 65536, 1, 1376258, 65536, 1, 1441794, 65536, 1, 1376259, 65536, 1, 1441795, 65536, 1, 1376260, 65536, 1, 1441796, 65536, 1, 1376261, 65536, 1, 1441797, 65536, 1, 1441798, 65536, 1, 1441799, 65536, 1, 1441800, 65536, 1, 1376265, 65536, 1, 1441801, 65536, 1, 1376266, 65536, 1, 1441802, 65536, 1, 1376267, 65536, 1, 1441803, 65536, 1, 1376268, 65536, 1, 1441804, 65536, 1, 1376269, 65536, 1, 1441805, 65536, 1, 1376270, 65536, 1, 1441806, 65536, 1, 1441807, 65536, 1, 1441808, 65536, 1, 1376273, 65536, 1, 1441809, 65536, 1, 1376274, 65536, 1, 1441810, 65536, 1, 1376275, 65536, 1, 1441811, 65536, 1, 1376276, 65536, 1, 1441812, 65536, 1, 1376277, 65536, 1, 1441813, 65536, 1, 1441814, 65536, 1, 1441815, 65536, 1, 1441816, 65536, 1, 1376281, 65536, 1, 1441817, 65536, 1, 1441818, 65536, 1, 1441819, 65536, 1, 1441820, 65536, 1, 1441821, 65536, 1, 1441822, 65536, 1, 1441823, 65536, 1, 1441824, 65536, 1, 1441825, 65536, 1, 1376290, 65536, 1, 1441826, 65536, 1, 1376291, 65536, 1, 1441827, 65536, 1, 1376292, 65536, 1, 1441828, 65536, 1, 1376293, 65536, 1, 1441829, 65536, 1, 1376294, 65536, 1, 1441830, 65536, 1, 1376295, 65536, 1, 1441831, 65536, 1, 1310759, 65536, 1, 65536, 65536, 1, 131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 65536, 1, 393216, 65536, 1, 458752, 65536, 1, 524288, 65536, 1, 589824, 65536, 1, 655360, 65536, 1, 720896, 65536, 1, 786432, 65536, 1, 851968, 65536, 1, 917504, 65536, 1, 983040, 65536, 1, 1048576, 65536, 1, 1114112, 65536, 1, 1179648, 65536, 1, 1245184, 65536, 1, 1310720, 65536, 1, 1376288, 65536, 1, 1376289, 65536, 1, 1376262, 65536, 1, 1376263, 65536, 1, 1376264, 65536, 1, 1376278, 65536, 1, 1376279, 65536, 1, 1376280, 65536, 1, 393217, 65536, 1, 458753, 65536, 1, 524289, 65536, 1, 589825, 65536, 1, 655361, 65536, 1, 720897, 65536, 1, 393218, 65536, 1, 458754, 65536, 1, 524290, 65536, 1, 589826, 65536, 1, 655362, 65536, 1, 393219, 65536, 1, 458755, 65536, 1, 524291, 65536, 1, 589827, 65536, 1, 327682, 65536, 1, 327681, 65536, 1, 262145, 65536, 1, 196609, 65536, 1, 131073, 65536, 1, 131074, 65536, 1, 65538, 65536, 1, 65539, 65536, 1, 65543, 65536, 1, 65542, 65536, 1, 65541, 65536, 1, 65537, 65536, 1, 65540, 65536, 1, 1245185, 65536, 1, 1245186, 65536, 1, 1310722, 65536, 1, 1310721, 65536, 1, 1245189, 65536, 1, 1245190, 65536, 1, 1310726, 65536, 1, 1310725, 65536, 1, 1310724, 65536, 1, 1245188, 65536, 1, 1245187, 65536, 1, 1310723, 65536, 1, 1310730, 65536, 1, 1310731, 65536, 1, 1310732, 65536, 1, 1245197, 65536, 1, 1245198, 65536, 1, 1310734, 65536, 1, 1310733, 65536, 1, 1245201, 65536, 1, 1245202, 65536, 1, 1310738, 65536, 1, 1310737, 65536, 1, 1310739, 65536, 1, 1310740, 65536, 1, 1310741, 65536, 1, 851983, 65536, 1, 851984, 65536, 1, 524303, 65536, 1, 589839, 65536, 1, 655375, 65536, 1, 720911, 65536, 1, 786447, 65536, 1, 524304, 65536, 1, 589840, 65536, 1, 655376, 65536, 1, 720912, 65536, 1, 786448, 65536, 1, 65558, 65536, 1, 65559, 65536, 1, 327704, 65536, 1, 393240, 65536, 1, 458776, 65536, 1, 524312, 65536, 1, 589848, 65536, 1, 589849, 65536, 1, 524313, 65536, 1, 458777, 65536, 1, 393241, 65536, 1, 327705, 65536, 1, 65563, 65536, 1, 65564, 65536, 1, 65562, 65536, 1, 65561, 65536, 1, 65560, 65536, 1, 720902, 65536, 1, 720903, 65536, 1, 720904, 65536, 1, 720905, 65536, 1, 458756, 65536, 1, 458757, 65536, 1, 458758, 65536, 1, 720906, 65536, 1, 524309, 65536, 1, 524310, 65536, 1, 524311, 65536, 1, 786449, 65536, 1, 786450, 65536, 1, 786451, 65536, 1, 327686, 65536, 1, 393222, 65536, 1, 393221, 65536, 1, 393220, 65536, 1, 327684, 65536, 1, 327683, 65536, 1, 327685, 65536, 1, 720933, 65536, 1, 720934, 65536, 1, 720930, 65536, 1, 720929, 65536, 1, 786470, 65536, 1, 852006, 65536, 1, 917542, 65536, 1, 983078, 65536, 1, 1048614, 65536, 1, 1114150, 65536, 1, 1179686, 65536, 1, 1245221, 65536, 1, 1245220, 65536, 1, 1310752, 65536, 1, 1310753, 65536, 1, 1310754, 65536, 1, 1310755, 65536, 1, 1310756, 65536, 1, 1310757, 65536, 1, 1245222, 65536, 1, 1310758, 65536, 1, 786465, 65536, 1, 1245219, 65536, 1, 327687, 65536, 1, 327688, 65536, 1, 327700, 65536, 1, 327701, 65536, 1, 327702, 65536, 1, 327703, 65536, 1, 196621, 65536, 1, 196623, 65536, 1, 196622, 65536, 1, 1114127, 65536, 1, 1114128, 65536, 1, 1179663, 65536, 1, 1179664, 65536, 1, 1245200, 65536, 1, 1245199, 65536, 1, 1310735, 65536, 1, 1310736, 65536, 1, 1376272, 65536, 1, 1376271, 65536, 1, 524316, 65536, 1, 524317, 65536, 1, 524318, 65536, 1, 262178, 65536, 1, 262179, 65536, 1, 262180, 65536, 1, 262181, 65536, 1, 262182, 65536, 1, 786464, 65536, 1, 786463, 65536, 1, 786462, 65536, 1, 917532, 65536, 1, 917531, 65536, 1, 851995, 65536, 1, 851994, 65536, 1, 786459, 65536, 1, 786460, 65536, 1, 786461, 65536, 1, 851997, 65536, 1, 851996, 65536, 1, 917533, 65536, 1, 851998, 65536, 1, 851999, 65536, 1)
+layer_1/name = "Kill"
+layer_1/tile_data = PackedInt32Array(524292, 1, 196608, 524293, 1, 196608, 524294, 1, 196608, 458767, 1, 0, 458768, 1, 0, 1310727, 1, 0, 1310728, 1, 0, 1310729, 1, 0, 1245194, 1, 0, 1245195, 1, 0, 1245196, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1245203, 1, 0, 1245204, 1, 0, 1245205, 1, 0, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 1376282, 1, 0, 1376283, 1, 0, 1376284, 1, 0, 1376285, 1, 0, 1376286, 1, 0, 1376287, 1, 0, 196624, 1, 131072, 196620, 1, 65536, 851993, 1, 65536, 917530, 1, 65536, 655384, 1, 196608, 655385, 1, 196608, 786466, 1, 196608, 786469, 1, 196608, 852000, 1, 196608, 852001, 1, 196608, 917534, 1, 196608, 917535, 1, 196608)
+layer_2/name = "Extra"
+layer_2/modulate = Color(0.596078, 0.407843, 0.176471, 1)
+layer_2/tile_data = PackedInt32Array(327701, 2, 0, 327702, 2, 0, 327703, 2, 0, 327704, 2, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(3, 3)
+offset = Vector2(960, 540)
+
+[node name="PlayerOne" parent="." instance=ExtResource("2_v34o2")]
+position = Vector2(128, 888)
+
+[node name="PlayerTwo" parent="." instance=ExtResource("3_lgjra")]
+position = Vector2(208, 888)
+
+[node name="Sensor" parent="." instance=ExtResource("4_jlj7v")]
+position = Vector2(1800, 160)
+
+[node name="Sensor2" parent="." instance=ExtResource("4_jlj7v")]
+position = Vector2(176, 208)
+
+[node name="Lighting Setup" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting Setup"]
+position = Vector2(652, 271)
+rotation = -0.872665
+energy = 0.5
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 5.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting Setup"]
+environment = SubResource("Environment_vcdru")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting Setup"]
+
+[node name="Background" type="Sprite2D" parent="Lighting Setup"]
+modulate = Color(0.698039, 0.552941, 0.301961, 1)
+z_index = -1
+texture_repeat = 3
+texture = ExtResource("5_m3dkp")
+centered = false
+region_enabled = true
+region_rect = Rect2(1920, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="Lighting Setup"]
+visible = false
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.305882, 0, 0.427451, 1)
+
+[node name="lasers" type="Node2D" parent="."]
+
+[node name="ColorRect" parent="lasers" instance=ExtResource("6_j33vq")]
+offset_left = 840.0
+offset_top = 672.0
+offset_right = 1036.0
+offset_bottom = 820.0
+scale = Vector2(0.74, 0.974)
+
+[node name="BodyParticles" parent="lasers/ColorRect" index="2"]
+modulate = Color(0.572549, 0.0392157, 0.164706, 1)
+
+[node name="ColorRect2" parent="lasers" instance=ExtResource("6_j33vq")]
+offset_left = 1680.0
+offset_top = 480.0
+offset_right = 1876.0
+offset_bottom = 628.0
+rotation = 0.0
+scale = Vector2(0.49, 1)
+
+[node name="BodyParticles" parent="lasers/ColorRect2" index="2"]
+modulate = Color(0.571948, 0.0380479, 0.166155, 1)
+
+[node name="Platform 1" type="Node2D" parent="."]
+
+[node name="InvisPlatform" parent="Platform 1" instance=ExtResource("6_nwp36")]
+position = Vector2(384, 190)
+
+[node name="DetectionArea" parent="Platform 1/InvisPlatform" index="1"]
+position = Vector2(648, 66)
+
+[node name="InvisPlatform2" parent="Platform 1" instance=ExtResource("6_nwp36")]
+position = Vector2(432, 190)
+
+[node name="DetectionArea" parent="Platform 1/InvisPlatform2" index="1"]
+position = Vector2(648, 66)
+
+[node name="InvisPlatform3" parent="Platform 1" instance=ExtResource("6_nwp36")]
+position = Vector2(480, 190)
+
+[node name="DetectionArea" parent="Platform 1/InvisPlatform3" index="1"]
+position = Vector2(648, 66)
+
+[node name="InvisPlatform4" parent="Platform 1" instance=ExtResource("6_nwp36")]
+position = Vector2(528, 190)
+
+[node name="DetectionArea" parent="Platform 1/InvisPlatform4" index="1"]
+position = Vector2(648, 66)
+
+[node name="PauseScreen" parent="." instance=ExtResource("8_04w3y")]
+
+[editable path="lasers/ColorRect"]
+[editable path="lasers/ColorRect2"]
+[editable path="Platform 1/InvisPlatform"]
+[editable path="Platform 1/InvisPlatform2"]
+[editable path="Platform 1/InvisPlatform3"]
+[editable path="Platform 1/InvisPlatform4"]

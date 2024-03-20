@@ -24,6 +24,7 @@ layer_0/tile_data = PackedInt32Array(1376256, 65536, 1, 1441792, 65536, 1, 14417
 [node name="PlayerOne" type="CharacterBody2D" parent="."]
 position = Vector2(412, 953)
 script = ExtResource("2_0ly2v")
+playerColor = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerOne"]
 shape = SubResource("RectangleShape2D_08w57")
@@ -36,6 +37,7 @@ texture = ExtResource("1_iu371")
 position = Vector2(509, 958)
 script = ExtResource("2_0ly2v")
 isPlayerTwo = true
+playerColor = Color(0, 0, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerTwo"]
 shape = SubResource("RectangleShape2D_08w57")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj0i7n1dgbv52"]
+
+[ext_resource type="Script" path="res://_Scripts/SoundManager.cs" id="1_lk5u2"]
+[ext_resource type="AudioStream" uid="uid://c8a8xrercil2n" path="res://Sounds/685206__x1shi__video-game-music-seamless.wav" id="2_ochky"]
+
+[node name="SoundManager" type="Node2D"]
+script = ExtResource("1_lk5u2")
+MusicStream = ExtResource("2_ochky")

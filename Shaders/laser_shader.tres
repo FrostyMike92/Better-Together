@@ -1,0 +1,71 @@
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://c23epa2jmvwfl"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fwgxl"]
+frequency = 0.0519
+fractal_type = 3
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_g0tdq"]
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_fwgxl")
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_vskly"]
+output_port_for_preview = 0
+texture = SubResource("NoiseTexture2D_g0tdq")
+
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_nj7n8"]
+output_port_for_preview = 0
+default_input_values = [0, 0.75, 1, 0.0]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_lohj5"]
+output_port_for_preview = 0
+input_name = "screen_uv"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_r5mk4"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeIf" id="VisualShaderNodeIf_lo8bq"]
+default_input_values = [0, 0.0, 1, 0.0, 2, 0.1, 3, Vector3(0, 0, 0), 4, Vector3(0, 0, 0), 5, Vector3(0, 0, 0)]
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform sampler2D tex_frg_2;
+
+
+
+void fragment() {
+// Input:5
+	vec2 n_out5p0 = SCREEN_UV;
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, n_out5p0);
+
+
+// Step:4
+	float n_in4p0 = 0.75000;
+	float n_out4p0 = step(n_in4p0, n_out2p0.x);
+
+
+// Output:0
+	COLOR.a = n_out4p0;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(260, 160)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_vskly")
+nodes/fragment/2/position = Vector2(-500, 160)
+nodes/fragment/4/node = SubResource("VisualShaderNodeStep_nj7n8")
+nodes/fragment/4/position = Vector2(-240, 220)
+nodes/fragment/5/node = SubResource("VisualShaderNodeInput_lohj5")
+nodes/fragment/5/position = Vector2(-900, 280)
+nodes/fragment/6/node = SubResource("VisualShaderNodeInput_r5mk4")
+nodes/fragment/6/position = Vector2(-300, 60)
+nodes/fragment/9/node = SubResource("VisualShaderNodeIf_lo8bq")
+nodes/fragment/9/position = Vector2(20, 180)
+nodes/fragment/connections = PackedInt32Array(2, 0, 4, 1, 5, 0, 2, 0, 6, 0, 9, 0, 4, 0, 0, 1)

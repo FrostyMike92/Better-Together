@@ -1,0 +1,488 @@
+[gd_scene load_steps=10 format=3 uid="uid://d371fhu1onsu7"]
+
+[ext_resource type="Script" path="res://Levels/MainMenu.cs" id="1_55kx4"]
+[ext_resource type="TileSet" uid="uid://2dvvld3e7n37" path="res://Tilesets/testingtileset.tres" id="1_kev67"]
+[ext_resource type="AudioStream" uid="uid://dqmm80iylg85j" path="res://Sounds/ButtonSound.wav" id="2_05vub"]
+[ext_resource type="Texture2D" uid="uid://chlc6loy77u8d" path="res://Sprites/Square.png" id="2_yd3en"]
+[ext_resource type="AudioStream" uid="uid://cyis2y7dfe1mv" path="res://Sounds/Button.wav" id="3_f1hua"]
+[ext_resource type="Texture2D" uid="uid://no7ji05wbhei" path="res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp" id="3_xq0cu"]
+[ext_resource type="PackedScene" uid="uid://cs76h2bp561cy" path="res://Prefabs/sensor.tscn" id="4_ryusv"]
+[ext_resource type="Texture2D" uid="uid://kc0ss4d7wsxg" path="res://Sprites/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg" id="5_7wk38"]
+
+[sub_resource type="Environment" id="Environment_stlpo"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 6.0
+glow_bloom = 1.0
+fog_light_color = Color(0.670588, 0.533333, 0.0745098, 1)
+fog_light_energy = 4.37
+fog_sun_scatter = 1.0
+fog_density = 1.0
+fog_height = -1024.0
+fog_height_density = 0.055
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("startScreen", "levelScreen", "settingsScreen", "creditsScreen", "levelButtonParent")]
+script = ExtResource("1_55kx4")
+startScreen = NodePath("Menu Group/Start")
+levelScreen = NodePath("Menu Group/Level Select")
+settingsScreen = NodePath("Menu Group/Settings")
+creditsScreen = NodePath("Menu Group/Credits")
+levelButtonParent = NodePath("Menu Group/Level Select/GridContainer")
+buttonSound = ExtResource("3_f1hua")
+backButtonSound = ExtResource("2_05vub")
+
+[node name="Menu Group" type="CanvasLayer" parent="."]
+
+[node name="Start" type="Control" parent="Menu Group"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu Group/Start"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -292.5
+offset_right = 491.0
+offset_bottom = 292.5
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Start Button" type="Button" parent="Menu Group/Start/VBoxContainer"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Start Game
+"
+flat = true
+alignment = 0
+
+[node name="Level Buton" type="Button" parent="Menu Group/Start/VBoxContainer"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Level Select"
+flat = true
+alignment = 0
+
+[node name="Settings Button" type="Button" parent="Menu Group/Start/VBoxContainer"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+flat = true
+alignment = 0
+
+[node name="Credits Button" type="Button" parent="Menu Group/Start/VBoxContainer"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+flat = true
+alignment = 0
+
+[node name="Quit Button" type="Button" parent="Menu Group/Start/VBoxContainer"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+flat = true
+alignment = 0
+
+[node name="Level Select" type="Control" parent="Menu Group"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Menu Group/Level Select"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -227.5
+offset_top = -281.0
+offset_right = 227.5
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 25
+columns = 5
+
+[node name="Button" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "1"
+
+[node name="Button2" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "2
+"
+
+[node name="Button3" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "3"
+
+[node name="Button4" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "4"
+
+[node name="Button5" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "5"
+
+[node name="Button6" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "6"
+
+[node name="Button7" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "7"
+
+[node name="Button8" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "8"
+
+[node name="Button9" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "9"
+
+[node name="Button10" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "10"
+
+[node name="Button11" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "11"
+
+[node name="Button12" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "12"
+
+[node name="Button13" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "13"
+
+[node name="Button14" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "14"
+
+[node name="Button15" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "15"
+
+[node name="Button16" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "16"
+
+[node name="Button17" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "17"
+
+[node name="Button18" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "18"
+
+[node name="Button19" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "19"
+
+[node name="Button20" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "20"
+
+[node name="Button21" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "21"
+
+[node name="Button22" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "22"
+
+[node name="Button23" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "23"
+
+[node name="Button24" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "24"
+
+[node name="Button25" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "25"
+
+[node name="Button26" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "26"
+
+[node name="Button27" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "27"
+
+[node name="Button28" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "28"
+
+[node name="Button29" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "29"
+
+[node name="Button30" type="Button" parent="Menu Group/Level Select/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "30"
+
+[node name="Back Button" type="Button" parent="Menu Group/Level Select"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 1
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Control" parent="Menu Group"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back Button" type="Button" parent="Menu Group/Settings"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+flat = true
+alignment = 0
+
+[node name="Credits" type="Control" parent="Menu Group"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back Button" type="Button" parent="Menu Group/Credits"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+flat = true
+alignment = 0
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Background"]
+scale = Vector2(3, 3)
+tile_set = ExtResource("1_kev67")
+format = 2
+layer_0/name = "Build"
+layer_0/modulate = Color(0, 0, 0, 1)
+layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, 4, 65536, 1, 5, 65536, 1, 6, 65536, 1, 7, 65536, 1, 8, 65536, 1, 9, 65536, 1, 10, 65536, 1, 11, 65536, 1, 12, 65536, 1, 13, 65536, 1, 14, 65536, 1, 15, 65536, 1, 16, 65536, 1, 17, 65536, 1, 18, 65536, 1, 19, 65536, 1, 20, 65536, 1, 21, 65536, 1, 22, 65536, 1, 23, 65536, 1, 24, 65536, 1, 25, 65536, 1, 26, 65536, 1, 27, 65536, 1, 28, 65536, 1, 29, 65536, 1, 30, 65536, 1, 31, 65536, 1, 32, 65536, 1, 33, 65536, 1, 34, 65536, 1, 35, 65536, 1, 36, 65536, 1, 37, 65536, 1, 38, 65536, 1, 39, 65536, 1, 65575, 65536, 1, 131111, 65536, 1, 196647, 65536, 1, 262183, 65536, 1, 327719, 65536, 1, 393255, 65536, 1, 458791, 65536, 1, 524327, 65536, 1, 589863, 65536, 1, 655399, 65536, 1, 720935, 65536, 1, 786471, 65536, 1, 852007, 65536, 1, 917543, 65536, 1, 983079, 65536, 1, 1048615, 65536, 1, 1114151, 65536, 1, 1179687, 65536, 1, 1245223, 65536, 1, 1376256, 65536, 1, 1441792, 65536, 1, 1376257, 65536, 1, 1441793, 65536, 1, 1376258, 65536, 1, 1441794, 65536, 1, 1376259, 65536, 1, 1441795, 65536, 1, 1376260, 65536, 1, 1441796, 65536, 1, 1376261, 65536, 1, 1441797, 65536, 1, 1376262, 65536, 1, 1441798, 65536, 1, 1376263, 65536, 1, 1441799, 65536, 1, 1376264, 65536, 1, 1441800, 65536, 1, 1376265, 65536, 1, 1441801, 65536, 1, 1376266, 65536, 1, 1441802, 65536, 1, 1376267, 65536, 1, 1441803, 65536, 1, 1376268, 65536, 1, 1441804, 65536, 1, 1376269, 65536, 1, 1441805, 65536, 1, 1376270, 65536, 1, 1441806, 65536, 1, 1376271, 65536, 1, 1441807, 65536, 1, 1376272, 65536, 1, 1441808, 65536, 1, 1376273, 65536, 1, 1441809, 65536, 1, 1376274, 65536, 1, 1441810, 65536, 1, 1376275, 65536, 1, 1441811, 65536, 1, 1376276, 65536, 1, 1441812, 65536, 1, 1376277, 65536, 1, 1441813, 65536, 1, 1376278, 65536, 1, 1441814, 65536, 1, 1376279, 65536, 1, 1441815, 65536, 1, 1376280, 65536, 1, 1441816, 65536, 1, 1376281, 65536, 1, 1441817, 65536, 1, 1376282, 65536, 1, 1441818, 65536, 1, 1376283, 65536, 1, 1441819, 65536, 1, 1376284, 65536, 1, 1441820, 65536, 1, 1376285, 65536, 1, 1441821, 65536, 1, 1376286, 65536, 1, 1441822, 65536, 1, 1376287, 65536, 1, 1441823, 65536, 1, 1376288, 65536, 1, 1441824, 65536, 1, 1376289, 65536, 1, 1441825, 65536, 1, 1376290, 65536, 1, 1441826, 65536, 1, 1376291, 65536, 1, 1441827, 65536, 1, 1376292, 65536, 1, 1441828, 65536, 1, 1376293, 65536, 1, 1441829, 65536, 1, 1376294, 65536, 1, 1441830, 65536, 1, 1376295, 65536, 1, 1441831, 65536, 1, 1310759, 65536, 1, 65536, 65536, 1, 131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 65536, 1, 393216, 65536, 1, 458752, 65536, 1, 524288, 65536, 1, 589824, 65536, 1, 655360, 65536, 1, 720896, 65536, 1, 786432, 65536, 1, 851968, 65536, 1, 917504, 65536, 1, 983040, 65536, 1, 1048576, 65536, 1, 1114112, 65536, 1, 1179648, 65536, 1, 1245184, 65536, 1, 1310720, 65536, 1, 1179674, 65536, 1, 1245210, 65536, 1, 1310746, 65536, 1, 1179675, 65536, 1, 1245211, 65536, 1, 1310747, 65536, 1, 1179676, 65536, 1, 1245212, 65536, 1, 1310748, 65536, 1, 1179677, 65536, 1, 1245213, 65536, 1, 1310749, 65536, 1, 1179678, 65536, 1, 1245214, 65536, 1, 1310750, 65536, 1, 1179679, 65536, 1, 1245215, 65536, 1, 1310751, 65536, 1, 1179680, 65536, 1, 1245216, 65536, 1, 1310752, 65536, 1, 1179681, 65536, 1, 1245217, 65536, 1, 1310753, 65536, 1, 1179682, 65536, 1, 1245218, 65536, 1, 1310754, 65536, 1, 1179683, 65536, 1, 1245219, 65536, 1, 1310755, 65536, 1, 1179684, 65536, 1, 1245220, 65536, 1, 1310756, 65536, 1, 1179685, 65536, 1, 1245221, 65536, 1, 1310757, 65536, 1, 1179686, 65536, 1, 1245222, 65536, 1, 1310758, 65536, 1, 983073, 65536, 1, 1048609, 65536, 1, 1114145, 65536, 1, 983074, 65536, 1, 1048610, 65536, 1, 1114146, 65536, 1, 983075, 65536, 1, 1048611, 65536, 1, 1114147, 65536, 1, 983076, 65536, 1, 1048612, 65536, 1, 1114148, 65536, 1, 983077, 65536, 1, 1048613, 65536, 1, 1114149, 65536, 1, 983078, 65536, 1, 1048614, 65536, 1, 1114150, 65536, 1, 983071, 65536, 1, 1048607, 65536, 1, 1114143, 65536, 1, 983072, 65536, 1, 1048608, 65536, 1, 1114144, 65536, 1)
+layer_1/name = "Kill"
+layer_1/tile_data = PackedInt32Array()
+
+[node name="PlayerOne" type="Node2D" parent="Background" groups=["player"]]
+modulate = Color(0.25, 0.5, 2, 1)
+light_mask = 0
+z_index = 1
+position = Vector2(100, 984)
+scale = Vector2(0.75, 0.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/PlayerOne"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_yd3en")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/PlayerOne"]
+light_mask = 0
+color = Color(0, 0, 1, 1)
+shadow_enabled = true
+texture = ExtResource("3_xq0cu")
+texture_scale = 5.0
+
+[node name="PlayerTwo" type="Node2D" parent="Background" groups=["player"]]
+modulate = Color(1.5, 0.25, 0.25, 1)
+z_index = 1
+position = Vector2(200, 984)
+scale = Vector2(0.75, 0.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/PlayerTwo"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_yd3en")
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/PlayerTwo"]
+light_mask = 0
+color = Color(1, 0, 0, 1)
+shadow_enabled = true
+texture = ExtResource("3_xq0cu")
+texture_scale = 5.0
+
+[node name="Sensor" parent="Background" instance=ExtResource("4_ryusv")]
+position = Vector2(1750, 690)
+
+[node name="Sensor2" parent="Background" instance=ExtResource("4_ryusv")]
+position = Vector2(1600, 690)
+
+[node name="Lighting Setup" type="Node2D" parent="Background"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Background/Lighting Setup"]
+position = Vector2(652, 271)
+rotation = -0.872665
+energy = 0.5
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 5.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Background/Lighting Setup"]
+environment = SubResource("Environment_stlpo")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Background/Lighting Setup"]
+
+[node name="Background" type="Sprite2D" parent="Background/Lighting Setup"]
+modulate = Color(0.698039, 0.552941, 0.301961, 1)
+z_index = -1
+texture_repeat = 3
+texture = ExtResource("5_7wk38")
+centered = false
+region_enabled = true
+region_rect = Rect2(1920, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="Background/Lighting Setup"]
+visible = false
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.380392, 0.313726, 0.137255, 1)
+
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Start Button" to="." method="PlayButtonSound"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Start Button" to="." method="StartGame"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Level Buton" to="." method="PlayButtonSound"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Level Buton" to="." method="OpenLevelScreen"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Settings Button" to="." method="PlayButtonSound"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Settings Button" to="." method="OpenSettingsScreen"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Credits Button" to="." method="PlayButtonSound"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Credits Button" to="." method="OpenCreditsScreen"]
+[connection signal="pressed" from="Menu Group/Start/VBoxContainer/Quit Button" to="." method="QuitGame"]
+[connection signal="pressed" from="Menu Group/Level Select/Back Button" to="." method="PlayBackButtonSound"]
+[connection signal="pressed" from="Menu Group/Level Select/Back Button" to="." method="OpenStartScreen"]
+[connection signal="pressed" from="Menu Group/Settings/Back Button" to="." method="PlayBackButtonSound"]
+[connection signal="pressed" from="Menu Group/Settings/Back Button" to="." method="OpenStartScreen"]
+[connection signal="pressed" from="Menu Group/Credits/Back Button" to="." method="PlayBackButtonSound"]
+[connection signal="pressed" from="Menu Group/Credits/Back Button" to="." method="OpenStartScreen"]

@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmp2tmo2d41g"]
+[gd_scene load_steps=8 format=3 uid="uid://bmp2tmo2d41g"]
 
 [ext_resource type="TileSet" uid="uid://2dvvld3e7n37" path="res://Tilesets/testingtileset.tres" id="1_kbebq"]
 [ext_resource type="PackedScene" uid="uid://bsk83qh6g0gp4" path="res://Prefabs/player_one.tscn" id="2_o0na4"]
 [ext_resource type="PackedScene" uid="uid://2dfmpfiq5md3" path="res://Prefabs/player_two.tscn" id="3_87qfh"]
 [ext_resource type="PackedScene" uid="uid://cs76h2bp561cy" path="res://Prefabs/sensor.tscn" id="4_fddim"]
+[ext_resource type="Texture2D" uid="uid://kc0ss4d7wsxg" path="res://Sprites/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg" id="5_btbtw"]
+[ext_resource type="PackedScene" uid="uid://b0hio2d20bgs8" path="res://Levels/PauseScreen.tscn" id="6_equyx"]
+
+[sub_resource type="Environment" id="Environment_sl4ut"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 6.0
+glow_bloom = 1.0
+fog_light_color = Color(0.670588, 0.533333, 0.0745098, 1)
+fog_light_energy = 4.37
+fog_sun_scatter = 1.0
+fog_density = 1.0
+fog_height = -1024.0
+fog_height_density = 0.055
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,3 +55,36 @@ offset_right = 1002.0
 offset_bottom = 713.0
 theme_override_font_sizes/font_size = 45
 text = "Light up both sensors to progress"
+
+[node name="Lighting Setup" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting Setup"]
+position = Vector2(652, 271)
+rotation = -0.872665
+energy = 0.5
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 5.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting Setup"]
+environment = SubResource("Environment_sl4ut")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting Setup"]
+
+[node name="Background" type="Sprite2D" parent="Lighting Setup"]
+modulate = Color(0.698039, 0.552941, 0.301961, 1)
+z_index = -1
+texture_repeat = 3
+texture = ExtResource("5_btbtw")
+centered = false
+region_enabled = true
+region_rect = Rect2(1920, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="Lighting Setup"]
+visible = false
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.380392, 0.313726, 0.137255, 1)
+
+[node name="PauseScreen" parent="." instance=ExtResource("6_equyx")]

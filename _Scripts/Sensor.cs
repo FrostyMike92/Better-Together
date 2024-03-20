@@ -3,11 +3,14 @@ using System;
 
 public partial class Sensor : Area2D
 {
+	[Export] AudioStream activateSound, deactivateSound;
+
 	private bool isActive = false;
 
 	private int noPlayersOnSensor = 0;
 
 	private LevelManager levelManager;
+	private SoundManager soundManager;
 	private Color startColor;
 
 
@@ -15,6 +18,7 @@ public partial class Sensor : Area2D
 	{
 		// Get reference to the Level Manager
 		levelManager = GetNode<LevelManager>("/root/LevelManager");
+		soundManager = GetNode<SoundManager>("/root/SoundManager");
 		startColor = Modulate;
 
 		if (levelManager == null)
@@ -42,6 +46,8 @@ public partial class Sensor : Area2D
 
 			// Call "SetSensorActive()" in the level manager
 			levelManager.SetSensorActive();
+
+			soundManager.Play(0, soundManager, activateSound);
 		}
 
 		// Adjust the alpha of the color rect
@@ -69,6 +75,8 @@ public partial class Sensor : Area2D
 
 			// Call "SetSensorInactive()" in the level manager
 			levelManager.SetSensorInactive();
+
+			soundManager.Play(0, soundManager, deactivateSound);
 
 			// Reset to the default color
 			Modulate = startColor;

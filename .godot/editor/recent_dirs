@@ -1,7 +1,9 @@
-/Applications/Visual Studio Code.app/Contents/MacOS
+res://Scenes
+res://_Scripts
 res://Sprites
 res://Prefabs
-res://_Scripts
 res://Levels
-res://Tilesets
+res://Shaders
 res://
+/Applications/Visual Studio Code.app/Contents/MacOS
+res://Tilesets
