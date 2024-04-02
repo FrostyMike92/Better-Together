@@ -8,8 +8,8 @@ public partial class DisappearingPlatform : StaticBody2D
 
 	[Export] float platformRestoreTimer = 3f;
 
-    public override void _Ready()
-    {
+	public override void _Ready()
+	{
 		// Get references
 		animPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 
@@ -20,12 +20,12 @@ public partial class DisappearingPlatform : StaticBody2D
 		timer.OneShot = true;
 
 		timer.Timeout += OnTimerTimeout; // connect signal
-    }
+	}
 
-    public void PlayerEntered(Node2D body)
+	public void PlayerEntered(Node2D body)
 	{
-        if (body is not PlayerMovement) return;
-        if (timer.TimeLeft > 0) { return; }
+		if (body is not PlayerMovement) return;
+		if (timer.TimeLeft > 0) { return; }
 		
 		// play the disappear animation
 		// create a timer

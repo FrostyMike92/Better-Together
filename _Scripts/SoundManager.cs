@@ -8,8 +8,7 @@ public partial class SoundManager : Node
     public AudioStream MusicStream;
 
     private AudioStreamPlayer musicPlayer;
-
-
+    
     public enum Type
     {
         NON_POSITIONAL,
@@ -64,7 +63,6 @@ public partial class SoundManager : Node
             }
             musicPlayer.Play();
             musicPlayer.VolumeDb = -20f; // Unmute the volume
-            // How to make sure that it loops??
         }
     }
 
@@ -79,4 +77,14 @@ public partial class SoundManager : Node
         }
     }
 
+    public void SetMasterVolume(float volume)
+    {
+        // Ensure the volume is within the range 0 to 1
+        volume = Mathf.Clamp(volume, 0f, 1f);
+        
+        float volumeDb = Mathf.LinearToDb(volume); // Convert from linear value to Db
+
+        // Set the global volume using the AudioServer
+        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Master"), volumeDb);
+    }
 }

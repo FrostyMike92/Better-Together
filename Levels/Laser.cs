@@ -29,6 +29,7 @@ public partial class Laser : Line2D
         startParticles.Rotation = angle;
         endParticles.Rotation = angle + Mathf.Pi;
         bodyParticles.Rotation = angle - Mathf.Pi/2;
+    
     }
 }
 

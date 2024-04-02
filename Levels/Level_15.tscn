@@ -1,0 +1,215 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4sy6vngh6i5"]
+
+[ext_resource type="TileSet" uid="uid://2dvvld3e7n37" path="res://Tilesets/testingtileset.tres" id="1_g1u2r"]
+[ext_resource type="PackedScene" uid="uid://bsk83qh6g0gp4" path="res://Prefabs/player_one.tscn" id="2_nkjbd"]
+[ext_resource type="PackedScene" uid="uid://2dfmpfiq5md3" path="res://Prefabs/player_two.tscn" id="3_hhupu"]
+[ext_resource type="PackedScene" uid="uid://cs76h2bp561cy" path="res://Prefabs/sensor.tscn" id="4_dlb5x"]
+[ext_resource type="Texture2D" uid="uid://kc0ss4d7wsxg" path="res://Sprites/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg" id="5_2wggx"]
+[ext_resource type="PackedScene" uid="uid://b0hio2d20bgs8" path="res://Levels/PauseScreen.tscn" id="6_8ihkt"]
+[ext_resource type="PackedScene" uid="uid://c31nka3q7di4b" path="res://Prefabs/invis_platform.tscn" id="7_frv8o"]
+
+[sub_resource type="Environment" id="Environment_vcdru"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 6.0
+glow_bloom = 1.0
+fog_light_color = Color(0.670588, 0.533333, 0.0745098, 1)
+fog_light_energy = 4.37
+fog_sun_scatter = 1.0
+fog_density = 1.0
+fog_height = -1024.0
+fog_height_density = 0.055
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 1
+scale = Vector2(3, 3)
+tile_set = ExtResource("1_g1u2r")
+format = 2
+layer_0/name = "Build"
+layer_0/modulate = Color(0, 0, 0, 1)
+layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, 4, 65536, 1, 5, 65536, 1, 6, 65536, 1, 7, 65536, 1, 8, 65536, 1, 9, 65536, 1, 10, 65536, 1, 11, 65536, 1, 12, 65536, 1, 13, 65536, 1, 14, 65536, 1, 15, 65536, 1, 16, 65536, 1, 17, 65536, 1, 18, 65536, 1, 19, 65536, 1, 20, 65536, 1, 21, 65536, 1, 22, 65536, 1, 23, 65536, 1, 24, 65536, 1, 25, 65536, 1, 26, 65536, 1, 27, 65536, 1, 28, 65536, 1, 29, 65536, 1, 30, 65536, 1, 31, 65536, 1, 32, 65536, 1, 33, 65536, 1, 34, 65536, 1, 35, 65536, 1, 36, 65536, 1, 37, 65536, 1, 38, 65536, 1, 39, 65536, 1, 65575, 65536, 1, 131111, 65536, 1, 196647, 65536, 1, 262183, 65536, 1, 327719, 65536, 1, 393255, 65536, 1, 458791, 65536, 1, 524327, 65536, 1, 589863, 65536, 1, 655399, 65536, 1, 720935, 65536, 1, 786471, 65536, 1, 852007, 65536, 1, 917543, 65536, 1, 983079, 65536, 1, 1114151, 65536, 1, 1179687, 65536, 1, 1245223, 65536, 1, 1376256, 65536, 1, 1441792, 65536, 1, 1376257, 65536, 1, 1441793, 65536, 1, 1376258, 65536, 1, 1441794, 65536, 1, 1376259, 65536, 1, 1441795, 65536, 1, 1376260, 65536, 1, 1441796, 65536, 1, 1441797, 65536, 1, 1441798, 65536, 1, 1441799, 65536, 1, 1441800, 65536, 1, 1441801, 65536, 1, 1376266, 65536, 1, 1441802, 65536, 1, 1376267, 65536, 1, 1441803, 65536, 1, 1376268, 65536, 1, 1441804, 65536, 1, 1376269, 65536, 1, 1441805, 65536, 1, 1376270, 65536, 1, 1441806, 65536, 1, 1441807, 65536, 1, 1441808, 65536, 1, 1376273, 65536, 1, 1441809, 65536, 1, 1376274, 65536, 1, 1441810, 65536, 1, 1376275, 65536, 1, 1441811, 65536, 1, 1376276, 65536, 1, 1441812, 65536, 1, 1376277, 65536, 1, 1441813, 65536, 1, 1441814, 65536, 1, 1441815, 65536, 1, 1441816, 65536, 1, 1376281, 65536, 1, 1441817, 65536, 1, 1441818, 65536, 1, 1441819, 65536, 1, 1441820, 65536, 1, 1441821, 65536, 1, 1441822, 65536, 1, 1441823, 65536, 1, 1441824, 65536, 1, 1441825, 65536, 1, 1376290, 65536, 1, 1441826, 65536, 1, 1376291, 65536, 1, 1441827, 65536, 1, 1376292, 65536, 1, 1441828, 65536, 1, 1376293, 65536, 1, 1441829, 65536, 1, 1376294, 65536, 1, 1441830, 65536, 1, 1376295, 65536, 1, 1441831, 65536, 1, 1310759, 65536, 1, 65536, 65536, 1, 131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 65536, 1, 393216, 65536, 1, 458752, 65536, 1, 524288, 65536, 1, 589824, 65536, 1, 655360, 65536, 1, 720896, 65536, 1, 786432, 65536, 1, 851968, 65536, 1, 917504, 65536, 1, 983040, 65536, 1, 1048576, 65536, 1, 1114112, 65536, 1, 1179648, 65536, 1, 1245184, 65536, 1, 1310720, 65536, 1, 1376288, 65536, 1, 1376289, 65536, 1, 1376278, 65536, 1, 1376279, 65536, 1, 1376280, 65536, 1, 1376272, 65536, 1, 1376271, 65536, 1, 1376282, 65536, 1, 1376283, 65536, 1, 1376284, 65536, 1, 1376285, 65536, 1, 1376286, 65536, 1, 1376287, 65536, 1, 1376261, 65536, 1, 1376262, 65536, 1, 1376263, 65536, 1, 1376264, 65536, 1, 1376265, 65536, 1, 1048615, 65536, 1, 327681, 65536, 1, 327682, 65536, 1, 327683, 65536, 1, 327684, 65536, 1, 327685, 65536, 1, 327690, 65536, 1, 327691, 65536, 1, 393227, 65536, 1, 393228, 65536, 1, 393229, 65536, 1, 393230, 65536, 1, 393231, 65536, 1, 393232, 65536, 1, 393233, 65536, 1, 393234, 65536, 1, 393235, 65536, 1, 393236, 65536, 1, 393237, 65536, 1, 393238, 65536, 1, 393239, 65536, 1, 393240, 65536, 1, 393241, 65536, 1, 393242, 65536, 1, 393243, 65536, 1, 393244, 65536, 1, 393245, 65536, 1, 393246, 65536, 1, 393247, 65536, 1, 393248, 65536, 1, 393249, 65536, 1, 393250, 65536, 1, 393251, 65536, 1, 327716, 65536, 1, 327717, 65536, 1, 327718, 65536, 1, 393252, 65536, 1, 393221, 65536, 1, 393220, 65536, 1, 393219, 65536, 1, 458755, 65536, 1, 458754, 65536, 1, 524290, 65536, 1, 524289, 65536, 1, 393218, 65536, 1, 393217, 65536, 1, 458753, 65536, 1, 720925, 65536, 1, 786461, 65536, 1, 458765, 65536, 1, 524302, 65536, 1, 524303, 65536, 1, 524304, 65536, 1, 458769, 65536, 1, 458768, 65536, 1, 458767, 65536, 1, 458766, 65536, 1, 983058, 65536, 1, 983059, 65536, 1, 983060, 65536, 1, 983061, 65536, 1, 983062, 65536, 1, 983063, 65536, 1, 983064, 65536, 1, 983065, 65536, 1, 983066, 65536, 1, 327702, 65536, 1, 327703, 65536, 1, 327704, 65536, 1, 327705, 65536, 1, 327706, 65536, 1, 327707, 65536, 1, 327708, 65536, 1, 327709, 65536, 1, 327710, 65536, 1, 327711, 65536, 1)
+layer_1/name = "Kill"
+layer_1/tile_data = PackedInt32Array(327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 655389, 1, 0, 458784, 1, 196608, 458785, 1, 196608, 458786, 1, 196608, 458756, 1, 196608, 458757, 1, 196608, 524291, 1, 196608, 589825, 1, 196608, 589826, 1, 196608, 393226, 1, 196608, 589838, 1, 196608, 589839, 1, 196608, 589840, 1, 196608, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 1048594, 1, 196608, 1048595, 1, 196608, 1048596, 1, 196608, 1048597, 1, 196608, 1048598, 1, 196608, 1048599, 1, 196608, 1048600, 1, 196608, 1048601, 1, 196608, 1048602, 1, 196608, 983067, 1, 131072, 983057, 1, 65536, 524305, 1, 131072, 458770, 1, 196608, 524301, 1, 196608, 458763, 1, 196608, 458764, 1, 196608, 851997, 1, 196608, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327701, 1, 0)
+layer_2/name = "Extra"
+layer_2/modulate = Color(0.596078, 0.407843, 0.176471, 1)
+layer_2/tile_data = PackedInt32Array(1376269, 2, 0, 1376270, 2, 0, 1376271, 2, 0, 1376272, 2, 0, 1376273, 2, 0, 1376274, 2, 0, 1376275, 2, 0, 1376276, 2, 0, 1376279, 2, 0, 1376280, 2, 0, 1376281, 2, 0, 1376282, 2, 0, 1376283, 2, 0, 1376284, 2, 0, 1376285, 2, 0, 1376286, 2, 0, 1376287, 2, 0)
+layer_3/name = "Platform"
+layer_3/modulate = Color(1, 1, 1, 0.392157)
+layer_3/z_index = 2
+layer_3/tile_data = PackedInt32Array(1114144, 8, 65536, 1114143, 8, 65536, 1114142, 8, 65536, 851970, 8, 65536, 851971, 8, 65536, 851972, 8, 65536, 589833, 8, 65536, 589834, 8, 65536, 589835, 8, 65536, 983055, 8, 65536, 983054, 8, 65536, 983053, 8, 65536, 852002, 8, 65536, 852003, 8, 65536, 852004, 8, 65536, 720922, 8, 65536, 720921, 8, 65536, 720920, 8, 65536)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(3, 3)
+offset = Vector2(960, 540)
+
+[node name="PlayerOne" parent="." instance=ExtResource("2_nkjbd")]
+position = Vector2(144, 992)
+collision_mask = 16393
+
+[node name="PlayerTwo" parent="." instance=ExtResource("3_hhupu")]
+position = Vector2(216, 992)
+collision_mask = 32777
+
+[node name="Sensor" parent="." instance=ExtResource("4_dlb5x")]
+position = Vector2(1816, 208)
+
+[node name="Sensor2" parent="." instance=ExtResource("4_dlb5x")]
+position = Vector2(98, 208)
+
+[node name="Lighting Setup" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting Setup"]
+position = Vector2(652, 271)
+rotation = -0.872665
+energy = 0.5
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 5.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting Setup"]
+environment = SubResource("Environment_vcdru")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting Setup"]
+
+[node name="Background" type="Sprite2D" parent="Lighting Setup"]
+visible = false
+modulate = Color(0.698039, 0.552941, 0.301961, 1)
+z_index = -1
+texture_repeat = 3
+texture = ExtResource("5_2wggx")
+centered = false
+region_enabled = true
+region_rect = Rect2(1920, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="Lighting Setup"]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.121569, 0.121569, 0.121569, 1)
+
+[node name="PauseScreen" parent="." instance=ExtResource("6_8ihkt")]
+
+[node name="Invis Platforms" type="Node2D" parent="."]
+
+[node name="InvisPlatform" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(0, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform2" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(48, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform2" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform3" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(96, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform3" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform4" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(144, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform4" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform5" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(192, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform5" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform6" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(240, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform6" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform7" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(288, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform7" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform8" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(336, -392)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform8" index="1"]
+position = Vector2(648, 1416)
+
+[node name="InvisPlatform11" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(480, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform11" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform12" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(528, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform12" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform13" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(576, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform13" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform14" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(624, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform14" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform15" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(672, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform15" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform16" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(720, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform16" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform17" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(768, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform17" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform18" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(816, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform18" index="1"]
+position = Vector2(648, 1456)
+
+[node name="InvisPlatform19" parent="Invis Platforms" instance=ExtResource("7_frv8o")]
+position = Vector2(864, -432)
+
+[node name="DetectionArea" parent="Invis Platforms/InvisPlatform19" index="1"]
+position = Vector2(648, 1456)
+
+[editable path="Invis Platforms/InvisPlatform"]
+[editable path="Invis Platforms/InvisPlatform2"]
+[editable path="Invis Platforms/InvisPlatform3"]
+[editable path="Invis Platforms/InvisPlatform4"]
+[editable path="Invis Platforms/InvisPlatform5"]
+[editable path="Invis Platforms/InvisPlatform6"]
+[editable path="Invis Platforms/InvisPlatform7"]
+[editable path="Invis Platforms/InvisPlatform8"]
+[editable path="Invis Platforms/InvisPlatform11"]
+[editable path="Invis Platforms/InvisPlatform12"]
+[editable path="Invis Platforms/InvisPlatform13"]
+[editable path="Invis Platforms/InvisPlatform14"]
+[editable path="Invis Platforms/InvisPlatform15"]
+[editable path="Invis Platforms/InvisPlatform16"]
+[editable path="Invis Platforms/InvisPlatform17"]
+[editable path="Invis Platforms/InvisPlatform18"]
+[editable path="Invis Platforms/InvisPlatform19"]

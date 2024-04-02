@@ -50,3 +50,21 @@ E:\Godot Projects\Better Together\.godot\mono\temp\bin\Debug\GodotSharpEditor.dl
 E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.csproj.CopyComplete
 E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\Better Together.genruntimeconfig.cache
 E:\Godot Projects\Better Together\.godot\mono\temp\obj\Debug\ref\Better Together.dll
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\bin\Debug\Better Together.deps.json
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\bin\Debug\Better Together.runtimeconfig.json
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\bin\Debug\Better Together.dll
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\bin\Debug\Better Together.pdb
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.csproj.AssemblyReference.cache
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.AssemblyInfoInputs.cache
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.AssemblyInfo.cs
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.csproj.CoreCompileInputs.cache
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.sourcelink.json
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better T.BBB3D805.Up2Date
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.dll
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\refint\Better Together.dll
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.pdb
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\Better Together.genruntimeconfig.cache
+C:\Users\riley\OneDrive\Documents\GitHub\Better-Together\.godot\mono\temp\obj\Debug\ref\Better Together.dll

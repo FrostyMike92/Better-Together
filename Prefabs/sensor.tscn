@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5p6u"]
 
 [node name="Sensor" type="Area2D"]
-modulate = Color(0.5, 1.5, 0.5, 0.25)
+modulate = Color(0.501961, 1, 0.501961, 0.25098)
 position = Vector2(1603, 969)
 collision_mask = 8
 script = ExtResource("1_7of5h")

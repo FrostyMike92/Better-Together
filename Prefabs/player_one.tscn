@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsk83qh6g0gp4"]
+[gd_scene load_steps=11 format=3 uid="uid://bsk83qh6g0gp4"]
 
 [ext_resource type="Script" path="res://_Scripts/PlayerMovement.cs" id="1_sg6lb"]
 [ext_resource type="PackedScene" uid="uid://bf88hy4af2pld" path="res://Prefabs/crumble_blocks.tscn" id="2_ve6bt"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://gd8n8adb4y28" path="res://Sounds/Jump.wav" id="3_vgylm"]
 [ext_resource type="Texture2D" uid="uid://no7ji05wbhei" path="res://Sprites/2d_lights_and_shadows_neutral_point_light (1).webp" id="4_p1jot"]
 [ext_resource type="AudioStream" uid="uid://dmknjdjoiyysn" path="res://Sounds/Blocks.wav" id="4_xpnn8"]
+[ext_resource type="AudioStream" uid="uid://bnftsxjwqjlmk" path="res://Sounds/pop.wav" id="5_uylgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08w57"]
 size = Vector2(48, 48)
@@ -27,6 +28,7 @@ playerColor = Color(0.0823529, 0.313726, 1, 1)
 deathBlock = ExtResource("2_ve6bt")
 jumpSound = ExtResource("3_vgylm")
 deathSound = ExtResource("4_xpnn8")
+stackSound = ExtResource("5_uylgj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_08w57")

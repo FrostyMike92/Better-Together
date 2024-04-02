@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b2paq7yh7mt4q"]
+[gd_scene load_steps=13 format=3 uid="uid://b2paq7yh7mt4q"]
 
 [ext_resource type="TileSet" uid="uid://2dvvld3e7n37" path="res://Tilesets/testingtileset.tres" id="1_qknau"]
 [ext_resource type="PackedScene" uid="uid://bsk83qh6g0gp4" path="res://Prefabs/player_one.tscn" id="2_3k22u"]
@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c31nka3q7di4b" path="res://Prefabs/invis_platform.tscn" id="6_ed6at"]
 [ext_resource type="Script" path="res://Levels/InvisPlatform.cs" id="6_jwhqg"]
 [ext_resource type="AudioStream" uid="uid://bnftsxjwqjlmk" path="res://Sounds/pop.wav" id="7_0ht6g"]
-[ext_resource type="Shader" path="res://Shaders/beam_shader.gdshader" id="7_ggvon"]
-[ext_resource type="Script" path="res://Levels/KillZone.cs" id="8_llp0e"]
 [ext_resource type="PackedScene" uid="uid://b0hio2d20bgs8" path="res://Levels/PauseScreen.tscn" id="10_kaewt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a17ex"]
@@ -17,47 +15,6 @@ size = Vector2(48, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l83gk"]
 size = Vector2(48, 24)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dhhf5"]
-shader = ExtResource("7_ggvon")
-shader_parameter/beams = 5
-shader_parameter/energy = 10.0
-shader_parameter/roughness = 5
-shader_parameter/frequency = 5
-shader_parameter/speed = 1.0
-shader_parameter/thickness = 0.008
-shader_parameter/outline_thickness = 0.027
-shader_parameter/beam_difference = 0.0
-shader_parameter/glow = 0.0
-shader_parameter/outline_glow = 0.0
-shader_parameter/color = Color(0.87451, 0.32549, 0.894118, 1)
-shader_parameter/outline_color = Color(0.423529, 0, 0.564706, 1)
-shader_parameter/progress = 1.0
-shader_parameter/y_offset = 0.0
-shader_parameter/fixed_edge_size = 0.347
-shader_parameter/noise_scale = Vector2(1, 1)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oavc5"]
-particle_flag_disable_z = true
-initial_velocity_min = 25.0
-initial_velocity_max = 100.0
-gravity = Vector3(0, 0, 0)
-scale_min = 5.0
-scale_max = 8.0
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_np3he"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(10, 98, 1)
-spread = 180.0
-initial_velocity_min = 10.0
-initial_velocity_max = 20.0
-gravity = Vector3(0, 0, 0)
-scale_min = 2.0
-scale_max = 5.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_56wbp"]
-size = Vector2(10, 198.002)
 
 [sub_resource type="Environment" id="Environment_x0wbl"]
 background_mode = 3
@@ -460,51 +417,6 @@ shape = SubResource("RectangleShape2D_l83gk")
 
 [node name="Detection areas" type="Node2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-modulate = Color(1, 0, 0.72549, 1)
-material = SubResource("ShaderMaterial_dhhf5")
-offset_left = 384.0
-offset_top = 576.0
-offset_right = 583.0
-offset_bottom = 724.0
-scale = Vector2(5.8, 1)
-
-[node name="StartParticles" type="GPUParticles2D" parent="ColorRect"]
-modulate = Color(0.309804, 0.72549, 1, 1)
-position = Vector2(-9.53674e-07, 72)
-rotation = -0.00051126
-process_material = SubResource("ParticleProcessMaterial_oavc5")
-lifetime = 0.3
-
-[node name="EndParticles" type="GPUParticles2D" parent="ColorRect"]
-modulate = Color(0.309804, 0.72549, 1, 1)
-position = Vector2(198.666, 73.8516)
-rotation = 3.14108
-process_material = SubResource("ParticleProcessMaterial_oavc5")
-lifetime = 0.3
-
-[node name="BodyParticles" type="GPUParticles2D" parent="ColorRect"]
-modulate = Color(0.282353, 0.27451, 0.486275, 1)
-position = Vector2(104.666, 73.8997)
-rotation = -1.57131
-amount = 16
-process_material = SubResource("ParticleProcessMaterial_np3he")
-
-[node name="KillZone" type="Area2D" parent="ColorRect"]
-visible = false
-position = Vector2(105, 74.0002)
-rotation = -1.57131
-collision_layer = 0
-collision_mask = 8
-script = ExtResource("8_llp0e")
-killPlayerOne = true
-killPlayerTwo = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/KillZone"]
-position = Vector2(-6.10352e-05, -5.99815)
-shape = SubResource("RectangleShape2D_56wbp")
-
 [node name="Lighting Setup" type="Node2D" parent="."]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lighting Setup"]
@@ -521,6 +433,7 @@ environment = SubResource("Environment_x0wbl")
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting Setup"]
 
 [node name="Background" type="Sprite2D" parent="Lighting Setup"]
+visible = false
 modulate = Color(0.698039, 0.552941, 0.301961, 1)
 z_index = -1
 texture_repeat = 3
@@ -530,11 +443,10 @@ region_enabled = true
 region_rect = Rect2(1920, 0, 1920, 1080)
 
 [node name="ColorRect" type="ColorRect" parent="Lighting Setup"]
-visible = false
 z_index = -1
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.380392, 0.313726, 0.137255, 1)
+color = Color(0.121569, 0.121569, 0.121569, 1)
 
 [node name="PauseScreen" parent="." instance=ExtResource("10_kaewt")]
 
@@ -551,4 +463,3 @@ color = Color(0.380392, 0.313726, 0.137255, 1)
 [connection signal="body_entered" from="Floating platform/InvisPlatform12/DetectionArea" to="Floating platform/InvisPlatform12" method="TriggerPlatform"]
 [connection signal="body_entered" from="Floating platform/InvisPlatform13/DetectionArea" to="Floating platform/InvisPlatform13" method="TriggerPlatform"]
 [connection signal="body_entered" from="Floating platform/InvisPlatform14/DetectionArea" to="Floating platform/InvisPlatform14" method="TriggerPlatform"]
-[connection signal="body_entered" from="ColorRect/KillZone" to="ColorRect/KillZone" method="OnBodyEntered"]

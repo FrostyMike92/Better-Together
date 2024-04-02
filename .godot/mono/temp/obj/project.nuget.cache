@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "IbQftAV0OvG1SAQyNwLEsDkcutRYkBuvaC0H+Paos4MSCM3Jlsn/xwdN3aPPuWn4bOlyiVM2MC+qzNunwML1fQ==",
+  "dgSpecHash": "CL9O+xesnMZOKvNyhfwW0mHfrJfCcRvTpmqVXeYFW3BAIb6Rbx/PIkGJ+LvKwX++78Pvo1ORN+AkDKvXDwU/0A==",
   "success": true,
-  "projectFilePath": "E:\\Godot Projects\\Better Together\\Better Together.csproj",
+  "projectFilePath": "C:\\Users\\riley\\OneDrive\\Documents\\GitHub\\Better-Together\\Better Together.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\riley\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
     "C:\\Users\\riley\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
-    "C:\\Users\\riley\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512"
+    "C:\\Users\\riley\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
+    "C:\\Users\\riley\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\riley\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\riley\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
   ],
   "logs": []
 }

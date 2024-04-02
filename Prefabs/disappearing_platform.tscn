@@ -71,7 +71,7 @@ _data = {
 }
 
 [node name="Disappearing Platform" type="StaticBody2D"]
-modulate = Color(0.105882, 0.105882, 0.105882, 1)
+modulate = Color(0.596078, 0, 0.482353, 0.392157)
 position = Vector2(504, 888)
 collision_mask = 9
 script = ExtResource("1_grgo8")

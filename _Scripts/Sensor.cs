@@ -6,19 +6,19 @@ public partial class Sensor : Area2D
 	[Export] AudioStream activateSound, deactivateSound;
 
 	private bool isActive = false;
-
 	private int noPlayersOnSensor = 0;
 
 	private LevelManager levelManager;
 	private SoundManager soundManager;
 	private Color startColor;
 
-
 	public override void _Ready()
 	{
 		// Get reference to the Level Manager
 		levelManager = GetNode<LevelManager>("/root/LevelManager");
 		soundManager = GetNode<SoundManager>("/root/SoundManager");
+
+		// Get the start color from the modulate
 		startColor = Modulate;
 
 		if (levelManager == null)
@@ -30,7 +30,6 @@ public partial class Sensor : Area2D
 			GD.Print("LevelManager reference acquired successfully.");
 		}
 	}
-
 
 	// Function to activate the sensor
 	public void Activate(Node2D body)
